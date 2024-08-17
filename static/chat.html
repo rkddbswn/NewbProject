@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chat</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+    <style>
+        .message{
+            max-width: 600px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <input type="text" id="test">
+        <br>
+        <button class='textBtn' onclick="send()">send</button>
+        <div id="chatBox"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <script src="/socket.io/socket.io.js"></script> 
+    
+    <style>
+        *{
+            background-color: black;
+            color: rgb(0, 255, 34);
+            text-align: center;
+        }
+        input{
+            background-color: transparent;
+            color: rgb(0, 255, 34);
+            border: transparent;
+            border-bottom: 1px solid transparent;
+            margin-top: 50px;
+            transition: border-bottom-color 0.3s ease;
+        }
+        input:hover{
+            border-bottom-color: rgb(0, 255, 34);
+        }
+        input:focus{
+            border-bottom: 1px solid rgb(0, 255, 34);
+        }
+        input::placeholder{
+            color: rgb(0, 255, 34);
+            opacity: 0.3;
+            transition: 0.3s;
+        }
+        input:hover::placeholder{
+            color: transparent;
+        }
+        input:focus::placeholder{
+            color: transparent;
+        }
+        #nameBtn{
+            background-color: transparent;
+            color: rgb(0, 255, 34);
+            border: none;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        #nameBtn:hover{
+            background-color: rgb(0, 255, 34);
+            color: black;
+        }
+        input:focus{outline: none;}
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        .shake{
+            animation: shake 0.3s ease;
+        }
+    </style>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div>
+        <input type='text' id="inputName" placeholder="Enter your name"><br>
+        <button id="nameBtn" onclick="sendName()">join</button>
+    </div>
+</body>
+</html>
