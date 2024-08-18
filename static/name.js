@@ -1,20 +1,5 @@
 var socket = io()
 
-function onPageLoad() {
-
-    socket.on('connect', function(){
-        console.log('connected');
-        
-       
-        const name = localStorage.getItem('username');
-        if(name){
-            socket.emit('newUser', name);
-        }
-    });
-} //페이지가 새로 로드될때마다 newUser 호출(수정필요)
-
-document.addEventListener('DOMContentLoaded', onPageLoad);
-
 
 function sendName(){
     
